@@ -35,6 +35,17 @@ def test_spare_between_frames():
     score = calculate_score([['7', '/'], ['5', '4']])
     assert score == 24
 
+def test_multiple_spares_in_sequence():
+    score = calculate_score([['7', '/'], ['5', '/'], ['4','3']])
+    assert score == 36
+
+
 def test_strike_first_throw():
     score = calculate_score([['X'], [3, 5]])
     assert score == 26
+
+def test_multiple_strikes_in_sequence():
+    score = calculate_score([['X'],['X'],['4','3']])
+    assert score == 55
+
+    # (4 + 3) + ( 10 + 4 + 3) + (10 + 10 + 4 + 3 + 4)
