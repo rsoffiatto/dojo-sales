@@ -29,3 +29,8 @@ def test_miss_throw_multiple_frames():
 def test_spare_last_frames():
     score = calculate_score([['7', '1'], ['3', '/']])
     assert score == 18
+
+
+def test_spare_between_frames():
+    score = calculate_score([['7', '/'], ['5', '4']])
+    assert score == 22

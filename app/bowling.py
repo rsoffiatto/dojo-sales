@@ -1,7 +1,7 @@
 
 def calculate_score(frames):
     score = 0
-    for frame in frames:
+    for frame in reversed(frames):
         if is_spare(frame):
             score += 10
         else:
